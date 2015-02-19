@@ -1,1 +1,16 @@
 /* CSS Datei */
+
+body{
+    
+    background-color: rgb(4, 81, 0);
+    width: 900;
+    margin: 50px auto;
+
+}
+
+#header{
+    background-color: rgba(87, 22, 22, 0);   
+    
+    padding: 50px;
+    margin-bottom: 50px;
+}
