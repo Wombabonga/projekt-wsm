@@ -7,7 +7,11 @@
        <link rel="stylesheet" type="text/css" href="css/Layout.css">
         
         <title>WSM - ProjektName</title>
-    
+        <?php
+
+include 'Connector.php';
+
+?>
     
     </head>
 
@@ -17,6 +21,6 @@
         
             <div id="header">
                 
-                <h1>MWS</h1>
+               MWS
         
             </div>
