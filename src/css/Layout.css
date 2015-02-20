@@ -1,16 +1,35 @@
 /* CSS Datei */
 
 body{
-    
-    background-color: rgb(4, 81, 0);
+   background-color: rgba(29, 127, 188, 0.69);
+}
+
+#contentbackground{
+    background-image: url('../img/bg_cobblestone.png');
+}
+
+#headerbackground{
+    background-image: url('../img/bg_grass.png');
+    background-repeat: repeat-x;
+}
+
+#footerbackground{
+    background-image: url('../img/bg_bedrock.png');
+    background-repeat: repeat-x;
+}
+
+#content{
     width: 950;
-    margin: 50px auto;
-
+    margin: 0 auto;
 }
 
-#header{
-    background-color: rgba(87, 22, 22, 0);   
-    
-    padding: 50px;
-    margin-bottom: 50px;
+#header{      
+    width: 950;
+    margin: 0 auto;
 }
+
+#footer{
+    width: 950;
+    margin: 0 auto;
+}
+
