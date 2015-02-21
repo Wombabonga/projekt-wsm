@@ -3,7 +3,7 @@
     <head>
     
         <meta charset="utf-8"/>
-        
+
        <link rel="stylesheet" type="text/css" href="css/Layout.css">
         
         <title>WSM - ProjektName</title>
@@ -16,7 +16,8 @@ include 'Connector.php';
     </head>
 
     <body>
-        
+        <!-- Add Title Image -->
+        <!-- Top Sidebar -->
   
         
             <div id="header">
