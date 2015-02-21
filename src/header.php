@@ -19,8 +19,12 @@ include 'Connector.php';
         <!-- Add Title Image -->
         <!-- Top Sidebar -->
   
+        <span id="imgLogo">
         
-            <div id="header">
+            <img src="img/background/minecraft_logo.png">
+                
+        </span>
+            <div class="header">
                 
                MWS
         

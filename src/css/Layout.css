@@ -6,55 +6,63 @@ html{
 
 body{
     background-color: rgba(0, 49, 255, 0.7);
-    padding-top: 128px;
+    padding-top: 0px;
     margin: 0;
     height: 100%;
 }
 
-#contentbackground{
-    background-image: url('../img/background/bg_cobblestone.png');
+p{
+    margin: 0;
 }
 
-#headerbackground{
-    
+.contentbackground{
+    background-image: url('../img/background/bg_cobblestone.png');
+    height: auto;
+}
+
+.headerbackground{    
     background-image: url('../img/background/bg_grass.png');
     background-repeat: repeat-x;
     height: 64px;
+    margin-top: 300px;
 }
 
-#footerbackground{
+.footerbackground{
     
     background-image: url('../img/background/bg_bedrock.png');
     background-repeat: repeat;
     height: 128px;
 }
 
-#main{
-    width: 1400;
-    height: 50%;
+#imgLogo > img{
+    display: block;
+    width: 1240;
     margin: 0 auto;
 }
 
-#header{      
+.main{
+    width: 1400;
+    margin: 0 auto;
+}
+
+.header{      
     width: 1400px;
     margin: 0 auto;
 }
 
-#content{
-    width: 80%;
-    float: left;
-    
+.content{
+    width: 80%; 
+    height: auto;
 }
 
-#leftsidebar{
+.leftsidebar{
     width: 20%;
+    height: 100%;
     float: left;
 }
 
-#footer{
-    width: 950;
-    margin:  0 auto;
-    padding-top: 64;
-    padding-bottom: 64;
+.footer{
+    width: 1400px;
+    margin: 0 auto;
 }
 

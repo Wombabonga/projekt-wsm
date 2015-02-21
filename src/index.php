@@ -1,18 +1,21 @@
 
-<div id="headerbackground">
+<div class="headerbackground">
     
     <?php include 'header.php'; ?>
 
 </div>
 
-<div id="contentbackground">
+<div class="contentbackground">
     
     
-    <div id="main">
+    <div class="main">
     
+        
+
+        
     
 
-        <div id="leftsidebar">
+        <div class="leftsidebar">
 
             <ul>
 
@@ -28,13 +31,13 @@
 
         </div>
 
+                <div class="content">
 
-        <div id="content">
-
-            <p>Hello <br> this <br> is <br> a <br> test <br> Text </p>
+            <p>Hello <br> this <br> is <br> a <br> test <br><br><br><br><br><br><br> Text</p>
 
 
         </div>
+
 
         </div>
     
@@ -43,7 +46,7 @@
 
 
 
-<div id="footerbackground">
+<div class="footerbackground">
 
     <?php include 'footer.php' ?>
   
