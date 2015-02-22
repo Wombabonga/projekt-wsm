@@ -1,13 +1,24 @@
-<?php
 
-include 'header.php';
-include 'Connector.php';
-
-?>
+    
+    <?php include 'header.php'; ?>
 
 
-Hello world
+    <div class="contentbackground">
+
+        <div class="content">
+        
+            <p>
+            
+                Here will be soon appear the content
+            
+            </p>
+        
+        </div>
+
+    </div>
 
 
 
-<?php include 'footer.php' ?>
+
+    <?php include 'footer.php' ?>
+  

@@ -10,4 +10,6 @@
     mysql_select_db($dbname);
 
 
+    echo 'All done in Connetors';
+
 ?>
