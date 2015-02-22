@@ -23,46 +23,35 @@ p{
 .headerbackground{    
     background-image: url('../img/background/bg_grass.png');
     background-repeat: repeat-x;
+    margin-top: 50px;
     height: 64px;
-    margin-top: 300px;
 }
 
 .footerbackground{
-    
     background-image: url('../img/background/bg_bedrock.png');
     background-repeat: repeat;
-    height: 128px;
 }
 
 #imgLogo > img{
     display: block;
-    width: 1240;
-    margin: 0 auto;
-}
-
-.main{
-    width: 1400;
-    margin: 0 auto;
-}
-
-.header{      
-    width: 1400px;
+    width: 800;
     margin: 0 auto;
 }
 
 .content{
-    width: 80%; 
-    height: auto;
+    width: 1200px;
+    margin: 0 auto;
 }
 
-.leftsidebar{
-    width: 20%;
-    height: 100%;
-    float: left;
+.header{      
+    width: 1200px;
+    margin: 0 auto;
 }
+
 
 .footer{
-    width: 1400px;
+    width: 1200px;
     margin: 0 auto;
+    height: 64px;
 }
 

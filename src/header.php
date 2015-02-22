@@ -7,25 +7,27 @@
        <link rel="stylesheet" type="text/css" href="css/Layout.css">
         
         <title>WSM - ProjektName</title>
-        <?php
-
-include 'Connector.php';
-
-?>
+        
+        <?php include 'Connector.php' ?>
     
     </head>
 
     <body>
-        <!-- Add Title Image -->
-        <!-- Top Sidebar -->
-  
-        <span id="imgLogo">
+ 
+        <div id="imgLogo">
         
             <img src="img/background/minecraft_logo.png">
                 
-        </span>
-            <div class="header">
-                
-               MWS
+        </div>
         
-            </div>
+        <div class="headerbackground">
+        
+            <p class="header">
+
+                Hello 
+
+            </p>
+
+        
+        </div>
+        

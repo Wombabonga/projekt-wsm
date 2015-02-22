@@ -1,12 +1,11 @@
     
-<div class="footer">
+<div class="footerbackground">
 
-    <li>
-
-<ui>
-    Impressum
-    </ui>
-</li>
+    <p class="footer">
+    
+    Imprssum
+    
+    </p>
 
 
 </div>
