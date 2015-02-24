@@ -32,7 +32,7 @@ p{
     background-repeat: repeat;
 }
 
-#imgLogo > img{
+#imgLogo img{
     display: block;
     width: 800;
     margin: 0 auto;
@@ -48,10 +48,63 @@ p{
     margin: 0 auto;
 }
 
-
 .footer{
     width: 1200px;
     margin: 0 auto;
     height: 64px;
+}
+
+.single{
+    width: 1200px;
+    margin: 0 auto;
+    height: 700px;
+}
+
+.single .txt{
+    float: left;
+    margin-top: 50px;
+    font-size: 64px;
+}
+
+.single img{
+    width: 256px;
+    padding: 25px;
+    margin: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid rgb(82, 58, 34);
+    border-radius: 50%;
+    float: left;
+}
+
+.container{
+    width: 1200px; 
+    float: left;
+    margin: 0 auto;
+}
+
+.container .item{
+    width: 25%; 
+    float: left;
+    height: 275px;
+    padding: 50px;
+    text-align: center;
+}
+
+.item img{
+    width: 128px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid rgb(82, 58, 34);
+    border-radius: 50%;
+}
+
+.item p{
+    font-size: 40px;
+    padding-bottom: 15px;    
+}
+
+.item a{
+    color: #000000;
+    text-decoration: none;
 }
 
