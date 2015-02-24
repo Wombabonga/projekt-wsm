@@ -7,12 +7,48 @@
 
         <div class="content">
         
-            <p>
+      
+                
+            <table border="1px">
             
-                Here will be soon appear the content
+                
+                
+                <?php 
+                
+         
+                $ergebnis = mysql_query("SELECT * FROM Produkt;");
+
+    
+                echo '<div class="container">';
+
+                while($zeile = mysql_fetch_array($ergebnis, MYSQL_ASSOC)){
             
-            </p>
+                    echo '<div class="item">';
+                    
+                 /*   echo '<a href="productView.php?pn='.$zeile['ProduktName'].'"><img src="img/items/'. $zeile['Bild'] .'.png"></a>';
+         
+                    test("hello");
+            
+                    echo $zeile['ProduktName'];*/
+                    
+                    ProductPreview($zeile['ProduktID']);
+                    
+                    echo '</div>';
         
+                
+                }
+
+                echo '</div>';
+                
+                ?>
+            
+            
+            
+                
+            </table>
+                
+            
+            
         </div>
 
     </div>
