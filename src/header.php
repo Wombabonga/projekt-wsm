@@ -8,7 +8,7 @@
         
         <title>WSM - ProjektName</title>
         
-        <?php include 'Connector.php' ?>
+        <?php include 'Connector.php'; include 'Util.php'; ?>
     
     </head>
 
