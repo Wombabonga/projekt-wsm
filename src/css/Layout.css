@@ -40,12 +40,14 @@ p{
 
 .content{
     width: 1200px;
+    min-height: 800px;
     margin: 0 auto;
 }
 
 .header{      
     width: 1200px;
     margin: 0 auto;
+    padding: 1px;
 }
 
 .footer{
@@ -86,7 +88,8 @@ p{
     width: 25%; 
     float: left;
     height: 275px;
-    padding: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
 }
 
@@ -108,3 +111,43 @@ p{
     text-decoration: none;
 }
 
+
+
+#navigation a{
+    color: #fff;
+}
+
+#navigation form{
+    padding: 0;
+    
+}
+
+#navigation li{
+    display: inline;
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#navigation li a:hover{
+    display: inline;
+    text-align: center;
+    background-color: rgb(82, 44, 7);
+    border-radius: 25%;
+}
+
+#navigation input[type=submit]{
+    padding: 0;
+    margin: 0;
+    height: 32;
+    width: 64px;
+}
+
+#navigation input[type=text]{
+    padding: 0;
+    margin: 0;
+    height: 32px;
+    width: 256px;
+}
