@@ -39,7 +39,7 @@
         
         $item = mysql_fetch_array($erg, MYSQL_ASSOC);
         
-        echo '<img src="img/items/'. $item['Bild'] .'.png"/><div><table border ="1" position="right">
+        echo '<img src="img/items/'. $item['Bild'] .'.png"/><div><table border ="0" position="right">
         <tr><td><span style="font-weight:100; font-size:500%">'. $item['ProduktName'] .'</span></td></tr><tr><td><br></td></tr><tr><td><span style="font-weight:100; font-size:200%">'. $item['ProduktBeschreibung'] .'</td></tr></table></div>';;
          
         
