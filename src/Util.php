@@ -9,7 +9,7 @@
             or die("Fehler : " . mysql_error());
         $item = mysql_fetch_array($erg, MYSQL_ASSOC);
         
-        
+       
         
         echo '<a href="single.php?pid=' . $ProduktID . '">';
 
@@ -47,7 +47,11 @@
         echo '</div>';
         
         
+        echo '<div class="txt"> <font size="5">';
         
+        echo $item['ProduktBeschreibung'];
+        
+        echo '</font></div>';
        // echo $ProductID; 
     }
 
