@@ -15,8 +15,17 @@
                 
                 <?php 
                 
+                $ergebnis = null;
+
+                if(isset($_GET['kategorie'])){
+                    
+                    $ergebnis = mysql_query("SELECT * FROM Produkt where kategorieID = " .$_GET['kategorie'] . ";");
+                    
+                }else{
          
-                $ergebnis = mysql_query("SELECT * FROM Produkt;");
+                    $ergebnis = mysql_query("SELECT * FROM Produkt;");
+           
+                }
 
     
                 echo '<div class="container">';
@@ -25,12 +34,7 @@
             
                     echo '<div class="item">';
                     
-                 /*   echo '<a href="productView.php?pn='.$zeile['ProduktName'].'"><img src="img/items/'. $zeile['Bild'] .'.png"></a>';
-         
-                    test("hello");
             
-                    echo $zeile['ProduktName'];*/
-                    
                     ProductPreview($zeile['ProduktID']);
                     
                     echo '</div>';
