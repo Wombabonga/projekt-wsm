@@ -40,7 +40,7 @@ p{
 
 .content{
     width: 1200px;
-    min-height: 800px;
+    min-height: 720px;
     margin: 0 auto;
 }
 
@@ -63,8 +63,8 @@ p{
 }
 
 .single .txt{
-    float: left;
-    margin-top: 50px;
+    text-align: left;
+
     font-size: 64px;
 }
 
@@ -150,4 +150,22 @@ p{
     margin: 0;
     height: 32px;
     width: 256px;
+}
+
+.shoppingCart{
+    width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    min-height: 670px;
+}
+
+.shoppingCart ul{
+    padding: 0;
+    margin: 0;
+}
+
+.shoppingCart li{
+    list-style: none;
+    margin: 0;
+    padding: 20px;
 }

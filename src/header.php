@@ -1,14 +1,20 @@
+<?php 
+    session_start();
+
+
+    include_once 'Connector.php'; 
+    include 'ViewBuilder.php';
+?>
+
 <html>
 
     <head>
     
         <meta charset="utf-8"/>
 
-       <link rel="stylesheet" type="text/css" href="css/Layout.css">
+        <link rel="stylesheet" type="text/css" href="css/Layout.css">
         
         <title>WSM - ProjektName</title>
-        
-        <?php include 'Connector.php'; include 'ViewBuilder.php'; ?>
     
     </head>
 
@@ -32,32 +38,27 @@
 
                             <?php 
 
-                            $allKat = mysql_query('SELECT * FROM Kategorie');
-                            while($kat = mysql_fetch_array($allKat, MYSQL_ASSOC)){
+                            $result = $mysql->query("SELECT * FROM Kategorie;");
+                          
+                            while($kat = $result->fetch_object()){
                                 echo '<li>';
 
-                                echo '<a href="index.php?kategorie=' . $kat['KategorieID'] . '">';
-                                echo $kat['KategorieName'];
+                                echo '<a href="index.php?kategorie=' . $kat->KategorieID. '">';
+                                echo $kat->KategorieName;
                                 echo '</a>';
 
                                 echo '</li>';
 
-
-
                             }
 
-
                             ?>
-
-                            <li>
-                            
-                                Suche 
-                            
-                            </li>
                             
                             <li>
 
-                                <input type="text" value="suche">
+                                <input type="text" name="suche" value="suche"
+                                       onfocus="if(this.value=='suche'){this.value=''}"
+                                       onblur="if(this.value==''){this.value='suche'}"
+                                       >
 
                             </li>
                             
@@ -65,6 +66,20 @@
                                 
                                 <input type="submit" name="Allonsy" value="LOS">
                             
+                            </li>
+                            
+                            <li>
+
+                                <a href="shoppingCard.php">Warenkorb</a>
+                                
+                               <!--
+                                Noch nicht verfügbar
+                                
+                                <a>Anmelden</a>
+                                
+                                <a>Registrieren</a> 
+                                -->
+                                
                             </li>
 
 

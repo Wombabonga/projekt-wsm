@@ -4,46 +4,62 @@
         echo $x;
     }
 
-    function ProductPreview($ProduktID){
-        $erg = mysql_query('SELECT * FROM Produkt WHERE ProduktID = ' . $ProduktID)
-            or die("Fehler : " . mysql_error());
-        $item = mysql_fetch_array($erg, MYSQL_ASSOC);
-        
-       
-        
-        echo '<a href="single.php?pid=' . $ProduktID . '">';
+    function ProductPreview($Produkt){
+      
+        echo '<a href="single.php?pid=' . $Produkt->ProduktID . '">';
 
         echo '<p>';
         
-        echo $item['ProduktName'];
+        echo $Produkt->ProduktName;
         
         echo '</p>';
         
-        
-        echo '<img src="img/items/'. $item['Bild'] .'.png"/>';
+        echo '<img src="img/items/'. $Produkt->Bild .'.png"/>';
         
         
         echo '<p>';
         
-        echo 'Preis ' . $item['Preis'] . " €";
+        echo 'Preis ' . $Produkt->Preis . " €";
                 
         echo '</p>';
  
         echo '</a>';
     }
 
-    function ProductView($ProduktID){
+    function ProductView($Produkt){
         
-        $erg = mysql_query('SELECT * FROM Produkt WHERE ProduktID = ' . $ProduktID)
-            or die("Fehler : " . mysql_error());
+       /* echo '<img src="img/items/'. $Produkt->Bild.'.png"/><div><table border ="0" position="right">
+        <tr><td><span style="font-weight:100; font-size:500%">'. $Produkt->ProduktName .'</span></td></tr><tr><td><br></td></tr><tr><td><span style="font-weight:100; font-size:200%">'. $Produkt->ProduktBeschreibung .'</td></tr></table></div>';;*/
+      
         
-        $item = mysql_fetch_array($erg, MYSQL_ASSOC);
         
-        echo '<img src="img/items/'. $item['Bild'] .'.png"/><div><table border ="0" position="right">
-        <tr><td><span style="font-weight:100; font-size:500%">'. $item['ProduktName'] .'</span></td></tr><tr><td><br></td></tr><tr><td><span style="font-weight:100; font-size:200%">'. $item['ProduktBeschreibung'] .'</td></tr></table></div>';;
+        echo '<img src="img/items/'. $Produkt->Bild.'.png"/>';
+       
+        echo '<div class="txt">';
+        
+        echo $Produkt->ProduktName; 
+        echo $Produkt->ProduktBeschreibung;
          
+        echo '</div>';
         
-       // echo $ProductID; 
+          echo '<form action="updateShoppingCard.php" method="post">';
+        
+        echo '<select name="amount">';
+        
+        for($i = 1; $i <= 20; $i++)
+            echo '<option value="' .$i . '">' . $i . '</option>';
+    
+        
+        echo '</select>';
+        
+        echo '<button>Add To cart</button>';
+        
+        echo '<input type="hidden" name="productID" value="' .$Produkt->ProduktID. '">'; 
+        echo '<input type="hidden" name="type" value="add">';
+            
+            
+        echo '</form>';
+        
     }
 
 ?>
