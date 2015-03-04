@@ -138,6 +138,10 @@ p{
     border-radius: 25%;
 }
 
+#navigation a{
+    text-decoration: none;
+}
+
 #navigation input[type=submit]{
     padding: 0;
     margin: 0;

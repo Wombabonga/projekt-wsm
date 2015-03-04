@@ -55,9 +55,7 @@
                             
                             <li>
 
-                                <input type="text" name="suche" value="suche"
-                                       onfocus="if(this.value=='suche'){this.value=''}"
-                                       onblur="if(this.value==''){this.value='suche'}"
+                                <input type="text" name="suche"                                       placeholder="Suche ... "
                                        >
 
                             </li>
