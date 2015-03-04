@@ -14,24 +14,33 @@
                 
                 
                 <?php 
-                
+
+                $result = null;
+
+                if(isset($_GET['kategorie'])){
+           
+                    $result = $mysql->query("SELECT * FROM Produkt WHERE kategorieID = " .$_GET['kategorie'] . ";");
+                    
+                }else if(isset($_POST['suche'])){
+                 
+                    $result = $mysql->query("SELECT * FROM Produkt WHERE ProduktName LIKE '%" .$_POST['suche'] . "%';");
+                    
+                }else{
          
-                $ergebnis = mysql_query("SELECT * FROM Produkt;");
+                    $result = $mysql->query("SELECT * FROM Produkt;");
+           
+                }
 
     
                 echo '<div class="container">';
 
-                while($zeile = mysql_fetch_array($ergebnis, MYSQL_ASSOC)){
+
+                while($zeile = $result->fetch_object()){
             
                     echo '<div class="item">';
                     
-                 /*   echo '<a href="productView.php?pn='.$zeile['ProduktName'].'"><img src="img/items/'. $zeile['Bild'] .'.png"></a>';
-         
-                    test("hello");
             
-                    echo $zeile['ProduktName'];*/
-                    
-                    ProductPreview($zeile['ProduktID']);
+                    ProductPreview($zeile);
                     
                     echo '</div>';
         

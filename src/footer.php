@@ -3,7 +3,7 @@
 
     <p class="footer">
     
-    Imprssum
+    Impressum
     
     </p>
 
