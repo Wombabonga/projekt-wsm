@@ -55,7 +55,7 @@
                             
                             <li>
 
-                                <input type="text" name="suche"                                       placeholder="Suche ... "
+                                <input type="text" name="suche" placeholder="Suche ... "
                                        >
 
                             </li>
