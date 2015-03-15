@@ -11,10 +11,8 @@
 
     $mysql = new mysqli($url, $user, $pwd, $dbname);
 
-    if($mysql){
-        echo 'Connection is active';
-    }else{
-        echo 'Error something went wrong';
+    if(!$mysql){
+          echo 'Error something went wrong';
     }
 
     echo '<br>';
