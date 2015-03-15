@@ -1,50 +1,44 @@
 <?php
 
-    function test($x){
-        echo $x;
-    }
+    include_once('Util.php');
 
     function ProductPreview($Produkt){
       
         echo '<a href="single.php?pid=' . $Produkt->ProduktID . '">';
 
-        echo '<p>';
+        echo '<div class="text">';
         
         echo $Produkt->ProduktName;
         
-        echo '</p>';
+        echo '</div>';
         
         echo '<img src="img/items/'. $Produkt->Bild .'.png"/>';
         
         
-        echo '<p>';
+        echo '<div class="text">';
         
         echo 'Preis ' . $Produkt->Preis . " €";
                 
-        echo '</p>';
+        echo '</div>';
  
         echo '</a>';
     }
 
     function ProductView($Produkt){
         
-       /* echo '<img src="img/items/'. $Produkt->Bild.'.png"/><div><table border ="0" position="right">
-        <tr><td><span style="font-weight:100; font-size:500%">'. $Produkt->ProduktName .'</span></td></tr><tr><td><br></td></tr><tr><td><span style="font-weight:100; font-size:200%">'. $Produkt->ProduktBeschreibung .'</td></tr></table></div>';;*/
-      
-        
-        
         echo '<img src="img/items/'. $Produkt->Bild.'.png"/>';
        
-        echo '<div class="txt">';
+        echo '<div class="text head">' . $Produkt->ProduktName . '</div>';
         
-        echo $Produkt->ProduktName; 
-        echo $Produkt->ProduktBeschreibung;
-         
-        echo '</div>';
+        echo '<div class="text description">' . $Produkt->ProduktBeschreibung . '</div>';
         
-          echo '<form action="updateShoppingCard.php" method="post">';
+        echo '<div class="text price"> Preis ' . $Produkt->Preis . ' € </div>';
         
-        echo '<select name="amount">';
+        
+        
+        echo '<form action="updateShoppingCard.php" method="post">';
+        
+        echo '<div class="text formText"> Anzahl <select name="amount">';
         
         for($i = 1; $i <= 20; $i++)
             echo '<option value="' .$i . '">' . $i . '</option>';
@@ -52,14 +46,69 @@
         
         echo '</select>';
         
-        echo '<button>Add To cart</button>';
+       // echo '<input type="button" value="Zum Warenkorb hinzufügen">';
+        
+        echo '<button> Zum Warenkorb hinzufügen </button>';
         
         echo '<input type="hidden" name="productID" value="' .$Produkt->ProduktID. '">'; 
         echo '<input type="hidden" name="type" value="add">';
+        
             
+        echo '</div>';
             
         echo '</form>';
         
     }
+
+    function shoppingCartProductView($Product, $amount){
+        
+        
+        echo '<img src="img/items/' . $Product->Bild .'.png"/>';
+    
+        echo '<ul>';
+     
+      
+        echo '<li>' . $Product->ProduktName . '</li>';
+        echo '<li>' . 'Menge ' . $amount . '</li>';
+        echo '<li>' . $Product->Preis * $amount . ' €' . '</li>';
+        
+        echo '<li> <a href="updateShoppingCard.php?remove=' . $Product->ProduktID .'&returnURL=shoppingCard.php"> Entfernen </a> </li>';
+        
+        echo '</ul>';
+        
+    }
+
+    function kasseProductView($product, $amount){
+        
+        echo '<img src="img/items/' .$product->Bild . '.png"/>';
+        
+        echo '<ul>';
+        
+        echo '<li>' . $product->ProduktName . '</li>';
+        echo '<li>' . 'Menge ' . $amount . '</li>';
+        echo '<li>' . $product->Preis * $amount . ' €' . '</li>';
+ 
+        
+        echo '</ul>';
+        
+    }
+
+    function buyProductView($product){
+        
+        echo '<img src="img/items/' .$product->Bild . '.png"/>';
+        
+        echo '<ul>';
+        
+        echo '<li>' . $product->ProduktName . '</li>';
+        echo '<li>' . 'Code ' . '</li>';
+        echo '<li>' . getProductCode() . '</li>';
+ 
+        
+        echo '</ul>';
+        
+    }
+
+
+
 
 ?>
