@@ -22,7 +22,11 @@
 
         <div id="imgLogo">
 
-            <img src="img/background/minecraft_logo.png">
+            <a href="index.php">
+            
+                <img src="img/background/minecraft_logo.png">
+
+            </a>
 
         </div>
 
@@ -31,7 +35,7 @@
             <div class="header">
 
                 <div id="navigation">
-
+                
                     <form action="index.php" method="post">
 
                         <ul>
@@ -55,8 +59,7 @@
                             
                             <li>
 
-                                <input type="text" name="suche" placeholder="Suche ... "
-                                       >
+                                <input type="text" name="suche" placeholder="Suche ... ">
 
                             </li>
                             
@@ -69,15 +72,7 @@
                             <li>
 
                                 <a href="shoppingCard.php">Warenkorb</a>
-                                
-                               <!--
-                                Noch nicht verfügbar
-                                
-                                <a>Anmelden</a>
-                                
-                                <a>Registrieren</a> 
-                                -->
-                                
+        
                             </li>
 
 
