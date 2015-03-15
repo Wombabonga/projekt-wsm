@@ -9,7 +9,7 @@ DROP DATABASE IF EXISTS wsm;
 -- Erstellt eine neua datenbank --
 create database wsm CHARACTER SET utf8 COLLATE utf8_general_ci;
 
--- script spoll mit der wsm datenbank arbeiten --
+-- script soll mit der wsm datenbank arbeiten --
 use wsm;
 
 -- Erstellt die Tabelle Produkt--
@@ -86,11 +86,23 @@ INSERT INTO Kategorie(KategorieName) VALUES
 -- Legt Tabelle Kunde an --
 CREATE TABLE IF NOT EXISTS Kunde(
     KundeID int(11) NOT NULL AUTO_INCREMENT,
+    KundeNickname varchar(20) NOT NULL,
     KundeName varchar(20) NOT NULL,
     KundeVorname varchar(20) NOT NULL,
     KundeEMAIL varchar(50) NOT NULL,
+    KundePasswd varchar(10) NOT NULL,
     PRIMARY KEY(KundeID)
 )CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+-- Fügt Beispiel Kunden an --
+INSERT INTO Kunde (KundeNickname, KundeName, KundeVorname, KundeEMAIL, KundePasswd) VALUES
+('Stormy Puma', 'Stern', 'Max', 'maxStern@toast.de', '123456'),
+('El Studen', 'Pfeiffer', 'Axel', 'axelPfeiffer@toast.de', '456789'),
+('The Puppy', 'Schmidt', 'Astrid', 'astridSchmidt@toast.de', '147852'),
+('Homeless Laser', 'Rotenbach', 'Robert', 'robertRobert@toast.de', '852369'),
+('King Slayer', 'Lannister', 'Jamie', 'jamieLannister@westeros.de', '987456'),
+('Rotten Pilot', 'Fischer', 'Max', 'maxFischer@toast.de', '654321'),
+('Sunny Panda', 'Brinkfurt', 'Nathalie', 'nathalieBrinkfurt@toast.de', '156975');
 
 
 
