@@ -7,6 +7,9 @@ include_once('Connector.php');
 if(isset($_POST["type"]) && $_POST["type"] == 'add'){
 
 
+    $returnURL = "single.php?pid=" . $_POST['productID'];
+    
+    
     $result = $mysql->query("SELECT * FROM Produkt WHERE produktID = " . $_POST['productID'] . ";");
     $obj = $result->fetch_object();
     
@@ -67,8 +70,6 @@ if(isset($_POST["type"]) && $_POST["type"] == 'add'){
             }
             
             
-            //Produkt details anzeigen der zum Warenkorb hinzugeügt wurde
-            showAddedProduct($obj, $_POST["amount"]);
             
         }else{
             $_SESSION['products'] = $new_product;
@@ -79,19 +80,29 @@ if(isset($_POST["type"]) && $_POST["type"] == 'add'){
         print_r($_SESSION['products']);
         
         
-        //echo $obj['ProduktName'];
+        header('Location:'. $returnURL);
+    }
+
+}
+
+
+//Produkt aus Warenkorb entfernen
+if(isset($_GET['remove']) && isset($_SESSION['products'])){
+    
+    foreach($_SESSION['products'] as $item){
+        
+        if($item['id'] != $_GET['remove']){
+            $product[] = array('id' => $item['id'], 'amount' => $item['amount']);
+        }
+        
+        
+        $_SESSION['products'] = $product;
+        
     }
     
-    //TODO: produkte loschen
-    
+    header('Location:'.$_GET['returnURL']);
     
 }
 
-
-function showAddedProduct($product, $amount){
-    echo '<br><br>';
-    echo $product->ProduktName . " wurde hinzugefugt";
-    echo $amount;
-}
 
 ?>
