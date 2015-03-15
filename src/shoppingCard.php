@@ -9,31 +9,44 @@ echo '<div class="contentbackground">';
 echo '<div class="shoppingCart">';
 
 if(isset($_SESSION['products'])){
-    echo '<ul>';
+
+    
+    
+    $sum = 0;
+    
+    echo '<div class="text"> Ihre Einkaufsliste </div>';
     
     foreach($_SESSION['products'] as $item){
         
-        $id = $item["id"];
-        $result = $mysql->query("SELECT * FROM Produkt WHERE ProduktID = " . $id . ";");
-        $obj = $result->fetch_object();
+        echo '<div class="shoppingItem">';
         
-        echo '<li>';
+        $result = $mysql->query("SELECT * FROM Produkt WHERE ProduktID = " . $item["id"] . ";");
+          
+        $product = $result->fetch_object();
         
-        echo $obj->ProduktName;
-
+        shoppingCartProductView($product, $item["amount"]);
         
-        echo " anzahl ".$item["amount"];
+        $sum += $product->Preis * $item["amount"];
         
-        
-        echo '</li>';
-             
+        echo '</div>';
 
     }
     
+    echo '<div class="bottomBar">'; 
+    
+    echo '<ul>';
+    
+    echo '<li> Summe ' . $sum . ' € </li>';
+    echo '<li> <a href="goToKasse.php"> Zur Kasse </a> </li>';
     
     echo '</ul>';
+    
+    echo '</div>';
+    
+    
+    
 }else{
-    echo 'Empty Card';
+    echo '<div class="text"> Ihr Einkaufswagen ist im moment leer </div>';
 }
 
 echo '</div>';
