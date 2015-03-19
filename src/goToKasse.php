@@ -20,7 +20,7 @@ echo '<div class="text"> Sie sind berreits Kunde ? Dann hier Anmelden </div>';
 echo '<ul>';
 
 echo '<li> <input type="text" name="login_nickname" placeholder="Nickname"> </li>';
-echo '<li> <input type="text" name="login_passwd" placeholder="Passwort"> </li>';
+echo '<li> <input type="password" name="login_passwd" placeholder="Passwort"> </li>';
 
 echo '<li> <input type="submit" name="login" value="Anmelden"> </li>';
 
@@ -35,8 +35,8 @@ echo '<li> <input type="text" name="reg_nickname" value="" placeholder="Nickname
 echo '<li> <input type="text" name="reg_mail" placeholder="E-Mail Addresse"> </li>';
 echo '<li> <input type="text" name="reg_nachname" placeholder="Nachname"> </li>';
 echo '<li> <input type="text" name="reg_vorname" placeholder="Vorname"> </li>';
-echo '<li> <input type="text" name="reg_passwd" placeholder="Passwort"> </li>';
-echo '<li> <input type="text" name="reg_passwd_2" placeholder="Passwort Bestätigen"> </li>';
+echo '<li> <input type="password" name="reg_passwd" placeholder="Passwort"> </li>';
+echo '<li> <input type="password" name="reg_passwd_2" placeholder="Passwort Bestätigen"> </li>';
 
 echo '<li> <input type="submit" name="register" value="Registrieren">';
 

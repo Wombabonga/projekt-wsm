@@ -1,0 +1,287 @@
+/* CSS Datei fürs Backend */
+
+html{
+    height: 100%;
+}
+
+body{
+    padding: 16px;
+    margin: 0 auto;
+    height: 100%;
+    width: 70%;
+    background-color: #5a5a5a;
+}
+
+/* Login */
+.login{
+    margin: 0 auto;
+    min-height: 670px;
+}
+
+.login form{
+    margin: 0;
+}
+
+.login .text{
+    margin: 20px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.login ul{
+     margin: 0;
+    padding: 0;
+}
+
+.login li{
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 40px;
+    width: 450px;
+}
+
+.login input[type=text]{
+    padding: 8px 0px;
+    margin: 0;
+    width: 275px;
+    font-weight: 800;
+}
+
+.login input[type=password]{
+    padding: 8px 0px;
+    margin: 0;
+    width: 275px;
+    font-weight: 800;
+}
+
+.login input[type=submit]{
+    text-decoration: none;
+    background-color: rgb(20, 90, 28);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 38, 13);
+    font-size: 20px;
+    font-weight: 800;
+    padding: 16px 35px;
+    margin: 0 32px;
+}
+
+.login input[type=submit]:hover{
+    background-color: rgb(33, 155, 47);
+}
+
+
+
+
+/* Header */
+.header .text{
+    margin: 20px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.navigation li{
+    display: inline;
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    font-size: 22px;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.navigation a{
+    background-color:  rgb(20, 90, 82);
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #123456;
+    
+}
+
+.navigation li a:hover{
+    background-color: rgb(37, 186, 169);
+}
+
+/* Content */
+.content{
+    
+}
+
+/* Footer */
+.footer{
+    
+}
+
+/* Products List View */
+.products{
+    padding: 32px 0;
+}
+
+.products li{
+    display: inline-block;
+    text-align: center;  
+    width: 20%;
+    font-weight: 600;
+    height: 32px;
+}
+
+.products a{
+    background-color:  rgb(20, 39, 90);
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #123456;
+    
+}
+
+.products a:hover{
+    background-color: rgb(31, 60, 136);
+}
+
+.products .navigation li{
+    display: inline;
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    font-size: 22px;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.products .navigation a{
+    background-color:  rgb(20, 39, 90);
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #123456;
+    
+}
+
+.products .navigation li a:hover{
+    background-color: rgb(31, 60, 136);
+}
+
+/* Product edit View*/
+.editProduct{
+    margin: 0 auto;
+    float: left;
+}
+
+.logeditProduct form{
+    margin: 0;
+}
+
+
+.editProduct li{
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 40px;
+    width: 50%;
+    height: 64px;
+}
+
+.editProduct .one li{
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 40px;
+    width: 100%;
+    height: 64px;
+}
+
+.editProduct select{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: beige;
+    border-radius: 12px;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 8px 16px;
+    margin: 0 auto;
+}
+
+.editProduct input[type=text]{
+    padding: 8px 0px;
+    margin: 0;
+    width: 275px;
+    font-weight: 800;
+}
+
+.editProduct input[type=submit]{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: beige;
+    border-radius: 12px;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 35px;
+    margin: 0 auto;
+}
+
+.editProduct input[type=submit]:hover{
+    background-color: rgb(95, 95, 95);
+    color: black;
+}
+
+/* Kunden liste */
+.kunde{
+    padding: 32px 0;
+}
+
+.kunde li{
+    display: inline-block;
+    text-align: center;  
+    width: 20%;
+    font-weight: 600;
+    height: 32px;
+}
+
+.kunde a{
+    background-color:  rgb(20, 39, 90);
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #123456;
+    
+}
+
+.kunde a:hover{
+    background-color: rgb(31, 60, 136);
+}
+
+.kunde .navigation li{
+    display: inline;
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    font-size: 22px;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.kunde .navigation a{
+    background-color:  rgb(20, 39, 90);
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #123456;
+    
+}
+
+.kunde .navigation li a:hover{
+    background-color: rgb(31, 60, 136);
+}
+

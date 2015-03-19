@@ -1,10 +1,3 @@
-<script type="text/javascript">
-function FensterOeffnen (Adresse) {
-  MeinFenster = window.open(Adresse, "Zweitfenster", "width=860,height=800,left=0,top=0");
-  MeinFenster.focus();
-}
-</script>
-
 <?php
 //TODO: alles Produkte nochmal zeigen; button mit buy.php
 
@@ -47,7 +40,7 @@ if(isset($_SESSION['products']) && isset($_SESSION['user'])){
     echo '<ul>';
     
     echo '<li> Summe ' . $sum . ' € </li>';
-    echo '<li> <a href="buy.php" onclick="FensterOeffnen(this.href); return false"> Jetzt Kaufen </a> </li>';
+    echo '<li> <a href="buy.php" onclick="FensterOeffnen(this.href, 800, 640); return false"> Jetzt Kaufen </a> </li>';
     
     echo '</ul>';
     
