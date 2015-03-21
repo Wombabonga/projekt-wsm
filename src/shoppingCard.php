@@ -10,12 +10,11 @@ echo '<div class="shoppingCart">';
 
 if(isset($_SESSION['products'])){
 
-    
-    
     $sum = 0;
     
     echo '<div class="text"> Ihre Einkaufsliste </div>';
     
+    // Alle Produkte die im Warenkorb sind auflisten
     foreach($_SESSION['products'] as $item){
         
         echo '<div class="shoppingItem">';

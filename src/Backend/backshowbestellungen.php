@@ -24,9 +24,20 @@ ON
 WHERE 
     Bestellungen.KundeID = " . $id. ";");
 
+echo '<div class="showBestellungen">';
+    
+echo '<div class="tabelheader"> <ul> <li>BestellID</li> <li>Name</li> <li>Anzahl</li> <li>Datum</li> </div>';
+
 while($bestellung = $result->fetch_object()){
-    echo $bestellung->BestellID . " - " . $bestellung->ProduktName . " - " . $bestellung->Anzahl . " - " . $bestellung->Datum . '<br>';
+    echo '<ul>';
+    echo '<li>' . $bestellung->BestellID . '</li>';
+    echo '<li>' . $bestellung->ProduktName . '</li>';
+    echo '<li>' . $bestellung->Anzahl . '</li>';
+    echo '<li>' . $bestellung->Datum . '</li>';
+    echo '</ul>';
+    
 }
 
+echo '</div>';
 
 ?>

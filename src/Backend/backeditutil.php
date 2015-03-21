@@ -116,7 +116,7 @@ function showkunde($id){
         echo '<li> Vorname </li> <li> ' . $kunde->KundeVorname;
         echo '<li> Email </li> <li> ' . $kunde->KundeEMAIL;
         
-         echo '<div class="one"> <li> <a href="backshowbestellungen.php?kundeid='. $kunde->KundeID .'"> Bestellungen </a> </li> </div>';
+         echo '<li class="one"> <a href="backshowbestellungen.php?kundeid='. $kunde->KundeID .'"> Bestellungen </a> </li>';
         
         echo '</ul>';
 

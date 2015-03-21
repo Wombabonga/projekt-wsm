@@ -1,21 +1,15 @@
 <?php
-//TODO: alles Produkte nochmal zeigen; button mit buy.php
-
 include('header.php');
 
 echo '<div class="contentbackground">';
 echo '<div class="kasse">';
 
-
-//echo $user->KundeName;
-
-if(isset($_SESSION['products']) && isset($_SESSION['user'])){
+if(isset($_SESSION['products']) && isset($_SESSION['user'])){ 
 
     
     $user = $_SESSION['user'];
 
     echo '<div class="text"> Hallo ' . $user->KundeNickname . ' , das ist Ihre Einkaufsliste </div>';
-    
     
     $sum = 0;
     

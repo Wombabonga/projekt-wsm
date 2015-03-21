@@ -22,11 +22,9 @@ if(isset($_POST["login"]) && isset($_POST["login_nickname"]) && isset($_POST["lo
     
 }
 
-
 //Register
 if($_POST["register"] && $_POST["reg_nickname"] && $_POST["reg_mail"] && $_POST["reg_nachname"] && $_POST["reg_vorname"] && $_POST["reg_passwd"] && $_POST["reg_passwd_2"]){
-       
-    
+     
     $nickname = $_POST['reg_nickname'];
     $mail = $_POST['reg_mail'];
     $nachname = $_POST['reg_nachname'];

@@ -1,7 +1,6 @@
 <?php 
     include '../Connector.php';
     include 'backViewBuilder.php';
-    
 ?>
 
 <html>
@@ -20,7 +19,6 @@
         
         <div class="header">
         
-            
             <div class="text">Backend</div>
             
             <div class="navigation">
@@ -34,10 +32,6 @@
             
             </div>
         
-        
-        
         </div>
         
-    
-    
     

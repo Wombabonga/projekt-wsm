@@ -6,13 +6,9 @@
     <div class="contentbackground">
 
         <div class="content">
-        
-      
-                
+         
             <table border="1px">
-            
-                
-                
+        
                 <?php 
 
                 $result = null;
@@ -34,7 +30,6 @@
     
                 echo '<div class="container">';
 
-
                 while($zeile = $result->fetch_object()){
             
                     echo '<div class="item">';
@@ -51,19 +46,11 @@
                 
                 ?>
             
-            
-            
-                
             </table>
-                
-            
             
         </div>
 
     </div>
 
-
-
-
     <?php include 'footer.php' ?>
-  
+

@@ -1,8 +1,7 @@
 <?php 
     session_start();
 
-
-    include_once 'Connector.php'; 
+    include 'Connector.php'; 
     include 'ViewBuilder.php';
 ?>
 
@@ -10,12 +9,12 @@
 
     <head>
     
-        <meta charset="utf-8"/>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
         <link rel="stylesheet" type="text/css" href="css/Layout.css">
         <script type="text/javascript" src="js/script.js"></script>
         
-        <title>WSM - ProjektName</title>
+        <title>Minecraft Items Webshop</title>
     
     </head>
 
@@ -53,7 +52,6 @@
                                 echo '</a>';
 
                                 echo '</li>';
-
                             }
 
                             ?>

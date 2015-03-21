@@ -1,6 +1,6 @@
 <?php
 
-//Login
+//Login, überprüft ob der Benutzer und Passwort stimmen
 if(isset($_POST["login"])){
 
     if($_POST['login_name'] == "Root" && $_POST['login_passwd'] == "123"){        
@@ -10,6 +10,5 @@ if(isset($_POST["login"])){
     }
     
 }
-
 
 ?>

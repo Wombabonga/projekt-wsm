@@ -7,7 +7,7 @@
 DROP DATABASE IF EXISTS wsm;
 
 -- Erstellt eine neua datenbank --
-create database wsm;
+create database wsm DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 
 -- script soll mit der wsm datenbank arbeiten --
 use wsm;
@@ -22,8 +22,6 @@ CREATE TABLE IF NOT EXISTS Produkt (
     Preis float(6,2) DEFAULT NULL,
     PRIMARY KEY (ProduktID)
 )ENGINE=INNODB;
-
--- CHARACTER SET utf8 COLLATE utf8_general_ci; --
 
 -- Fügt der Tabelle Produkt eine vielzahl von datensätzen hinzu--
 INSERT INTO Produkt (ProduktName, Bild, Preis, KategorieID, ProduktBeschreibung) VALUES
@@ -114,7 +112,10 @@ CREATE TABLE IF NOT EXISTS Bestellungen(
     FOREIGN KEY (KundeID) REFERENCES Kunde(KundeID)
 )ENGINE=INNODB;
 
-
+INSERT INTO Bestellungen (KundeID, Datum) VALUES
+(1, '2015-03-19'),
+(5, '2015-03-19'),
+(5, '2015-03-20');
 
 -- Erstellt die Tabelle Bestelldeatils --
 CREATE TABLE IF NOT EXISTS Bestelldetails(
@@ -126,3 +127,9 @@ CREATE TABLE IF NOT EXISTS Bestelldetails(
     FOREIGN KEY (ProduktID) REFERENCES Produkt(ProduktID)
 )ENGINE=INNODB;
 
+INSERT INTO Bestelldetails (BestellID, ProduktID, Anzahl) VALUES
+(1, 16, 17),
+(2, 2, 16),
+(2, 23, 6),
+(3, 14, 15),
+(3, 19, 3);

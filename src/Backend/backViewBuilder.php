@@ -14,6 +14,8 @@ function buildProductView($ProductResults){
     
     echo '</div>';
     
+      echo '<div class="tabelheader"> <ul> <li> Bild </li> <li> Produkt Name </li> <li> Preis </li> <li></li> </ul> </div>';
+    
     while($product = $ProductResults->fetch_object()){
         echo '<ul>';
         
@@ -22,7 +24,7 @@ function buildProductView($ProductResults){
         echo '<li>' . $product->ProduktName . '</li>';
         echo '<li>' . $product->Preis . ' € </li>';
         echo '<li> <a href="backedit.php?type=1&opt=edit&id='. $product->ProduktID.'"> Bearbeiten </a> </li>';
-        echo '<li> <a href="backedit.php?type=1&opt=rm&id='. $product->ProduktID.'"> Entfernen </a> </li>';
+       // echo '<li> <a href="backedit.php?type=1&opt=rm&id='. $product->ProduktID.'"> Entfernen </a> </li>';
         
         echo '</ul>';
     }
@@ -34,9 +36,11 @@ function buildKundeView($KundenResults){
     
     echo '<div class="kunde">';
         
+    echo '<div class="tabelheader"> <ul> <li> NickName </li> <li> Name </li> <li> Vorname </li> </ul> </div>';
+    
     while($kunde = $KundenResults->fetch_object()){
         echo '<ul>';
-
+        
         echo '<li>' . $kunde->KundeNickname . '</li>';
         echo '<li>' . $kunde->KundeName. ' </li>';
         echo '<li>' . $kunde->KundeVorname. ' </li>'; 
@@ -47,6 +51,5 @@ function buildKundeView($KundenResults){
     
      echo '</div>';
 }
-
 
 ?>

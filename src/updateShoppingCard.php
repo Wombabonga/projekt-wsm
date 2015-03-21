@@ -21,7 +21,6 @@ if(isset($_POST["type"]) && $_POST["type"] == 'add'){
           
             $found = false;
             
-            
             echo 'old<br>';
 
             foreach($_SESSION['products'] as $item){
@@ -78,9 +77,8 @@ if(isset($_POST["type"]) && $_POST["type"] == 'add'){
         echo '<br>';
         
         print_r($_SESSION['products']);
-        
-        
-        header('Location:'. $returnURL);
+
+        header('Location:'. $returnURL); //automatisch zur angebenen URL weiterleiten
     }
 
 }

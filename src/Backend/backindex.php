@@ -6,8 +6,6 @@
         
         echo '<div class="content">';
         
-  
-        
         if($_GET['type'] == 1){
             
             $productResults = $mysql->query("SELECT * FROM Produkt;");
@@ -17,14 +15,11 @@
         }else if($_GET['type'] == 2){
             
             $kundenResults = $mysql->query("SELECT * FROM Kunde;");
-            
-            
-            buildKundeView($kundenResults);
-            
+                
+            buildKundeView($kundenResults);    
+        
         }
-        
-    
-        
+
         echo '</div>';
         
     }

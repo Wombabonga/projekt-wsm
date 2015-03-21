@@ -1,5 +1,6 @@
 <?php 
 
+    //Gibt einen zufälligen String zurück
     function getProductCode(){
         
         $length = 8;
@@ -10,5 +11,4 @@
         return $code;
     }
     
-
 ?>
