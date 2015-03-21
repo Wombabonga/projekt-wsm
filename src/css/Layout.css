@@ -15,6 +15,7 @@ p{
     margin: 0;
 }
 
+/* Hintergrund Bilder für die Einzelnen Abschnitte*/
 .contentbackground{
     background-image: url('../img/background/bg_cobblestone.png');
     height: auto;
@@ -30,14 +31,18 @@ p{
 .footerbackground{
     background-image: url('../img/background/bg_bedrock.png');
     background-repeat: repeat;
+    height: 128px;
 }
 
+/* Logo Bild */
 #imgLogo img{
     display: block;
     width: 800;
     margin: 0 auto;
+    padding-top: 16px;
 }
 
+/* Eigenschaften für Teil Abschnitte*/
 .content{
     width: 1200px;
     min-height: 720px;
@@ -56,16 +61,41 @@ p{
     height: 64px;
 }
 
+
+/* Single Layout*/
 .single{
     width: 1200px;
     margin: 0 auto;
     height: 700px;
 }
 
-.single .txt{
-    text-align: left;
-
+.single .text{
+    text-align: right;
     font-size: 64px;
+    color: #000000;
+}
+
+.single .text.head{
+    font-size: 75px;
+    font-weight: 800;
+    padding: 16px;
+}
+
+.single .text.description{
+    font-size: 50px;
+    padding: 16px;
+}
+
+.single .text.price{
+    font-size: 55px;
+    font-weight: 700;
+    padding: 16px;
+}
+
+.single .text.formText{
+    padding: 0px;
+    font-size: 31px;
+    font-weight: 600;
 }
 
 .single img{
@@ -74,10 +104,38 @@ p{
     margin: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 5px solid rgb(82, 58, 34);
-    border-radius: 50%;
+    border-radius: 25px;
     float: left;
 }
 
+.single button{
+    background-color: rgb(20, 90, 28);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 38, 13);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 31px;
+    margin: 0 32px;
+}
+
+.single button:hover{
+    background-color: rgb(33, 155, 47);
+}
+
+.single select{
+    background-color: rgb(20, 90, 28);
+    color: beige;
+    padding: 16px 13px;
+    margin: 0 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 38, 13);
+}
+
+
+/* Layout um alle Produkte auf zu listen*/
 .container{
     width: 1200px; 
     float: left;
@@ -87,7 +145,7 @@ p{
 .container .item{
     width: 25%; 
     float: left;
-    height: 275px;
+    height: 300px;
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: center;
@@ -95,15 +153,16 @@ p{
 
 .item img{
     width: 128px;
-    padding: 10px;
+    padding: 20px;
+    margin:  20 0;
     background-color: rgba(0, 0, 0, 0.5);
     border: 5px solid rgb(82, 58, 34);
-    border-radius: 50%;
+    border-radius: 35%;
 }
 
-.item p{
-    font-size: 40px;
-    padding-bottom: 15px;    
+
+.item .text{
+  font-size: 32px;
 }
 
 .item a{
@@ -112,14 +171,9 @@ p{
 }
 
 
-
-#navigation a{
-    color: #fff;
-}
-
+/* Navigations Bar für den Header*/
 #navigation form{
-    padding: 0;
-    
+    padding: 0; 
 }
 
 #navigation li{
@@ -128,48 +182,365 @@ p{
     list-style: none;
     padding: 10px;
     font-size: 22px;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-#navigation li a:hover{
-    display: inline;
-    text-align: center;
-    background-color: rgb(82, 44, 7);
-    border-radius: 25%;
+    background-color: rgba(255, 0, 0, 0);
 }
 
 #navigation a{
+    background-color:  rgb(20, 90, 82);
     text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #123456;
+    
 }
 
+#navigation li a:hover{
+    background-color: rgb(37, 186, 169);
+}
+
+
 #navigation input[type=submit]{
-    padding: 0;
-    margin: 0;
-    height: 32;
-    width: 64px;
+    background-color: rgb(20, 90, 82);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid #123456;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 20px;
+}
+
+#navigation input[type=submit]:hover{
+    background-color: rgb(37, 186, 169);
 }
 
 #navigation input[type=text]{
-    padding: 0;
+    padding: 8px 0px;
     margin: 0;
-    height: 32px;
-    width: 256px;
+    width: 275px;
+    font-weight: 800;
 }
 
+
+/* Warenkorb */
 .shoppingCart{
     width: 1200px;
-    padding: 0;
+    padding-top: 10px;
     margin: 0 auto;
     min-height: 670px;
 }
 
-.shoppingCart ul{
+.shoppingCart .text{
     padding: 0;
-    margin: 0;
+    margin: 0px;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: solid 10px rgba(18, 38, 57, 0.82);
+}
+
+.shoppingCart .shoppingItem{  
+    height: 175px;
+    padding: 25px;
+    text-align: left;
 }
 
 .shoppingCart li{
-    list-style: none;
-    margin: 0;
-    padding: 20px;
+    display: inline-block;
+    text-align: center; 
+    padding: 25px;
+    font-size: 32px;
+    width: 17%;
+    background-color: rgba(0, 0, 0, 0);
 }
+
+.shoppingCart img{
+    float: left;
+    width: 128px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid rgb(82, 58, 34);
+    border-radius: 50%; 
+}
+
+.shoppingCart a{
+    text-decoration: none;
+    background-color: rgb(20, 90, 28);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 38, 13);
+    font-size: 20px;
+    font-weight: 800;
+    padding: 16px 35px;
+    margin: 0 32px;
+}
+
+.shoppingCart a:hover{
+  background-color: rgb(33, 155, 47);
+}
+
+
+.shoppingCart .bottomBar ul{
+    margin: 0;
+    padding: 0;
+    border-top: solid 10px rgba(18, 38, 57, 0.82);
+}
+
+.bottomBar li{
+    padding: 10px 0px;
+    margin: 0 auto;
+    display: block;
+    text-align: center; 
+    font-size: 40px;
+    width: 450px;
+}
+
+/* Anmelde Screen */
+.login{
+    width: 1200px;
+    padding-top: 10px;
+    margin: 0 auto;
+    min-height: 670px;
+}
+
+.login form{
+    margin: 0;
+}
+
+.login .text{
+    margin: 20px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.login ul{
+    margin: 0;
+    padding: 0;
+}
+
+.login li{
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 40px;
+    width: 450px;
+}
+
+.login input[type=text]{
+    padding: 8px 0px;
+    margin: 0;
+    width: 275px;
+    font-weight: 800;
+}
+
+.login input[type=password]{
+    padding: 8px 0px;
+    margin: 0;
+    width: 275px;
+    font-weight: 800;
+}
+
+.login input[type=submit]{
+    text-decoration: none;
+    background-color: rgb(20, 90, 28);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 38, 13);
+    font-size: 20px;
+    font-weight: 800;
+    padding: 16px 35px;
+    margin: 0 32px;
+}
+
+.login input[type=submit]:hover{
+    background-color: rgb(33, 155, 47);
+}
+
+.buy .bottomBar ul{
+    margin: 0;
+    padding: 0;
+    border-top: solid 10px rgba(18, 38, 57, 0.82);
+}
+
+
+
+/* Kasse */
+.kasse{
+    width: 1200px;
+    padding-top: 10px;
+    margin: 0 auto;
+    min-height: 670px;
+}
+
+.kasse .text{
+    margin: 20px;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: solid 10px rgba(18, 38, 57, 0.82);
+}
+
+.kasse .kasseItem{
+    height: 175px;
+    padding: 25px;
+    text-align: left;
+}
+
+.kasse li{
+    display: inline-block;
+    text-align: center; 
+    padding: 25px;
+    font-size: 32px;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.kasse img{
+    float: left;
+    width: 128px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid rgb(82, 58, 34);
+    border-radius: 50%; 
+}
+
+.kasse a{
+    text-decoration: none;
+    background-color: rgb(20, 90, 28);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 38, 13);
+    font-size: 20px;
+    font-weight: 800;
+    padding: 16px 35px;
+    margin: 0 32px;
+}
+
+.kasse a:hover{
+    background-color: rgb(33, 155, 47);
+}
+
+
+.kasse .bottomBar ul{
+    margin: 0;
+    padding: 0;
+    border-top: solid 10px rgba(18, 38, 57, 0.82);
+}
+
+.bottomBar li{
+    padding: 10 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center; 
+    font-size: 40px;
+    width: 450px;
+}
+
+/* Buy */
+.buy{
+  width: 720px;
+    padding-top: 10px;
+    margin: 0 auto;
+    min-height: 670px;
+}
+
+.buyBackground{
+    padding: 0;
+    background-image: url('../img/background/bg_cobblestone.png');
+    background-repeat: repeat;
+}
+
+.buy .text{
+    margin: 20px;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: solid 10px rgba(18, 38, 57, 0.82);
+}
+
+.buy .buyItem{  
+    height: 175px;
+    padding: 0px;
+    margin: 0;
+    text-align: left;
+}
+
+.buy li{
+    display: inline-block;
+    text-align: center; 
+    padding: 25px;
+    font-size: 32px;
+    width: 17%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.buy img{
+    float: left;
+    width: 128px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid rgb(82, 58, 34);
+    border-radius: 50%; 
+}
+
+.buy a{
+    text-decoration: none;
+    background-color: rgb(20, 90, 28);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 38, 13);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 35px;
+    margin: 0 32px;
+}
+
+.buy a:hover{
+       background-color: rgb(33, 155, 47);
+}
+
+.buy .bottomBar ul{
+    margin: 0;
+    padding: 0;
+    border-top: solid 10px rgba(18, 38, 57, 0.82);
+}
+
+.bottomBar li{
+    padding: 36px 0px;
+    margin: 0 auto;
+    display: block;
+    text-align: center; 
+    font-size: 40px;
+    width: 450px;
+}
+
+/* Footer */
+.footer  ul{
+    margin: auto;
+    padding-top: 32px;
+    width: 50%;
+}
+
+.footer li{
+    padding: 0;
+    margin: 0;
+    display: inline;
+    text-align: center; 
+    font-size: 40px;
+}
+
+.footer a{
+    text-decoration: none;
+    background-color: rgb(198, 198, 198);
+    color: black;
+    border-radius: 12px;
+    border: 4px double rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 35px;
+    margin: 0 32px;
+}
+
+.footer a:hover{
+    background-color: rgb(157, 157, 157);
+    color: rebeccapurple;
+}
+

@@ -1,14 +1,17 @@
-    
-<div class="footerbackground">
+        <div class="footerbackground">
 
-    <p class="footer">
+            <div class="footer">
     
-    Impressum
+                <ul>
+                
+                    <li><a href="impressum.php" onclick="FensterOeffnen(this.href, 480, 480); return false"> Impressum </a></li>
+                    <li> <a href="Backend/backlogin.php" onclick="FensterOeffnen(this.href, 1024, 720); return false"> Backend </a></li>
+            
+                </ul>
+        
+            </div>
     
-    </p>
-
-
-</div>
+        </div>
 
     </body>
 
