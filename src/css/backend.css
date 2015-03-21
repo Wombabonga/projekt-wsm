@@ -9,7 +9,7 @@ body{
     margin: 0 auto;
     height: 100%;
     width: 70%;
-    background-color: #5a5a5a;
+    background-color: rgba(255, 220, 104, 0.51);
 }
 
 /* Login */
@@ -29,7 +29,7 @@ body{
 }
 
 .login ul{
-     margin: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -58,10 +58,10 @@ body{
 
 .login input[type=submit]{
     text-decoration: none;
-    background-color: rgb(20, 90, 28);
+    background-color: rgb(37, 56, 178);
     color: beige;
     border-radius: 12px;
-    border: 1px solid rgb(10, 38, 13);
+    border: 1px solid rgb(0,0,0);
     font-size: 20px;
     font-weight: 800;
     padding: 16px 35px;
@@ -69,7 +69,7 @@ body{
 }
 
 .login input[type=submit]:hover{
-    background-color: rgb(33, 155, 47);
+    background-color: rgb(104, 124, 255);
 }
 
 
@@ -92,17 +92,17 @@ body{
 }
 
 .navigation a{
-    background-color:  rgb(20, 90, 82);
+    background-color:  rgb(37, 56, 178);
     text-decoration: none;
     color: #fff;
     padding: 8px 15px;
     border-radius: 12px;
-    border: 1px solid #123456;
+    border: 1px solid #000000;
     
 }
 
 .navigation li a:hover{
-    background-color: rgb(37, 186, 169);
+    background-color: rgb(104, 124, 255);
 }
 
 /* Content */
@@ -134,12 +134,13 @@ body{
     color: #fff;
     padding: 8px 15px;
     border-radius: 12px;
+    font-weight: 900;
     border: 1px solid #123456;
     
 }
 
 .products a:hover{
-    background-color: rgb(31, 60, 136);
+    background-color:  rgb(104, 124, 255);
 }
 
 .products .navigation li{
@@ -148,11 +149,10 @@ body{
     list-style: none;
     padding: 10px;
     font-size: 22px;
-    background-color: rgba(255, 0, 0, 0);
 }
 
 .products .navigation a{
-    background-color:  rgb(20, 39, 90);
+    background-color:  rgb(37, 56, 178);
     text-decoration: none;
     color: #fff;
     padding: 8px 15px;
@@ -162,7 +162,11 @@ body{
 }
 
 .products .navigation li a:hover{
-    background-color: rgb(31, 60, 136);
+    background-color: rgb(104, 124, 255);
+}
+
+.tabelheader{
+    border-bottom: 4px solid #000000;
 }
 
 /* Product edit View*/
@@ -174,7 +178,6 @@ body{
 .logeditProduct form{
     margin: 0;
 }
-
 
 .editProduct li{
     display: inline-block;
@@ -202,10 +205,10 @@ body{
 
 .editProduct select{
     text-decoration: none;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 29, 65);
     color: beige;
     border-radius: 12px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     font-size: 20px;
     padding: 8px 16px;
     margin: 0 auto;
@@ -220,7 +223,7 @@ body{
 
 .editProduct input[type=submit]{
     text-decoration: none;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 29, 65);
     color: beige;
     border-radius: 12px;
     border: 2px solid rgb(255, 255, 255);
@@ -231,8 +234,7 @@ body{
 }
 
 .editProduct input[type=submit]:hover{
-    background-color: rgb(95, 95, 95);
-    color: black;
+    background-color: rgb(19, 54, 139);
 }
 
 /* Kunden liste */
@@ -244,7 +246,7 @@ body{
     display: inline-block;
     text-align: center;  
     width: 20%;
-    font-weight: 600;
+    font-weight: 900;
     height: 32px;
 }
 
@@ -259,7 +261,7 @@ body{
 }
 
 .kunde a:hover{
-    background-color: rgb(31, 60, 136);
+    background-color: rgb(104, 124, 255);
 }
 
 .kunde .navigation li{
@@ -285,3 +287,89 @@ body{
     background-color: rgb(31, 60, 136);
 }
 
+.kunde .tabelheader{
+    border-bottom: 4px solid #000000;
+}
+
+/* Show kunde */
+.showKunde{
+    margin: 0 auto;
+    float: left;
+}
+
+.showKunde form{
+    margin: 0;
+}
+
+.showKunde li{
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 40px;
+    width: 50%;
+    height: 64px;
+}
+
+.showKunde li.one{
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 40px;
+    width: 100%;
+    height: 64px;
+}
+
+.showKunde select{
+    text-decoration: none;
+    background-color: rgb(14, 29, 65);
+    color: beige;
+    border-radius: 12px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 8px 16px;
+    margin: 0 auto;
+}
+
+.showKunde a{
+    text-decoration: none;
+    background-color: rgb(14, 29, 65);
+    color: beige;
+    border-radius: 12px;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 35px;
+    margin: 0 auto;
+}
+
+.showKunde a:hover{
+    background-color: rgb(19, 54, 139);
+}
+
+/* show bestellungen */
+.showBestellungen{
+    margin: 0;
+    padding: 0;
+}
+
+.showBestellungen li{
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 0px;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 32px;
+    width: 25%;
+    height: 72px;
+}
+
+.showBestellungen .tabelheader{
+    border-bottom: 4px solid #000000;
+}
